@@ -21,10 +21,14 @@
 }
 
 .button-cita{
-  margin-top:100px;
+  margin-top:50px;
   
 }
 .button-cita button{
   font-size: 0.8em;
   width: 150px;
+}
+.textarea{
+  height: 100px;
+  background-color: rgb(243, 227, 209);
 }
