@@ -1,0 +1,30 @@
+.container-cita{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f1ede7;
+  height: 450px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+  
+  
+}
+.prim{
+  margin-top:50px;
+  padding-top:50px;
+}
+
+.segund{
+  margin-top:50px;
+}
+
+.button-cita{
+  margin-top:100px;
+  
+}
+.button-cita button{
+  font-size: 0.8em;
+  width: 150px;
+}
