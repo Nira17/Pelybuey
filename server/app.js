@@ -12,9 +12,8 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 
-const passport      = require('passport');
+const passport = require('passport');
 
-require('./passport');
 
 const { DBURL } = process.env;
 mongoose.Promise = Promise;
@@ -56,13 +55,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cookieParser());
-app.use(session({
-  secret:"some secret goes here",
-  resave: true,
-  saveUninitialized: true
-}));
-app.use(passport.initialize());
-app.use(passport.session());
+
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Express View engine setup
 
@@ -72,15 +67,22 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 
+// app.use(session({
+//   secret: 'angular auth passport secret shh',
+//   resave: true,
+//   saveUninitialized: true,
+//   cookie: {
+//     httpOnly: true,
+//     maxAge: 2419200000
+//   },
+//   store: new MongoStore({ mongooseConnection: mongoose.connection })
+// }));
 app.use(session({
-  secret: 'angular auth passport secret shh',
+  secret:"some secret goes here",
   resave: true,
   saveUninitialized: true,
-  cookie: {
-    httpOnly: true,
-    maxAge: 2419200000
-  },
   store: new MongoStore({ mongooseConnection: mongoose.connection })
+
 }));
 require('./passport')(app);
 
@@ -99,8 +101,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
-
-
 const authRoutes = require('./routes/auth-routes');
 app.use('/api', authRoutes);
 
@@ -110,6 +110,7 @@ app.use('/api', cardRoutes);
 app.use((req, res, next) => {
   res.sendFile(__dirname + "/public/index.html");
 });
+
 
 
 module.exports = app;

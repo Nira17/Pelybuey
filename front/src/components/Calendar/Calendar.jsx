@@ -165,11 +165,13 @@ export default class Calendar extends React.Component {
     onDayClick = (e, day) => {
         this.setState({
             selectedDay: day
-        }, () => {
-            console.log("SELECTED DAY: ", this.state.selectedDay);
-        });
-
-        this.props.onDayClick && this.props.onDayClick(e, day);
+        }, function (){
+            this.props.onDayClick && this.props.onDayClick(e, {
+                day: this.state.selectedDay,
+                month: this.state.dateContext.format("MMMM"),
+                year: this.state.dateContext.format("Y")
+            });
+        })
     }
 
     render() {
@@ -189,7 +191,7 @@ export default class Calendar extends React.Component {
             );
         }
 
-        console.log("blanks: ", blanks);
+        //console.log("blanks: ", blanks);
 
         let daysInMonth = [];
         for (let d = 1; d <= this.daysInMonth(); d++) {
@@ -203,7 +205,7 @@ export default class Calendar extends React.Component {
         }
 
 
-        console.log("days: ", daysInMonth);
+        //console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];

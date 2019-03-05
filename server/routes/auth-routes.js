@@ -44,10 +44,12 @@ authRoutes.post('/signup', (req, res, next) => {
         });
   
         aNewUser.save(err => {
-            if (err) {
-                res.status(400).json({ message: 'Saving user to database went wrong.' });
-                return;
-            }
+                    if (err) {
+                        res.status(400).json({
+                            message: 'Saving user to database went wrong.'
+                        });
+                        return;
+                    }
             
             // Automatically log in user after sign up
             // .login() here is actually predefined passport method

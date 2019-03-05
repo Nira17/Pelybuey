@@ -1,24 +1,53 @@
 const express    = require('express');
 const cardRoutes = express.Router();
 const Card       = require('../models/Citas-model');
-const ensureLogin = require("connect-ensure-login");
+const isAuthenticated  = require('../middlware/isAuthenticated')
 
 
 
 
-cardRoutes.post('/form',ensureLogin.ensureLoggedIn("/login"), (req, res, next) => {
+cardRoutes.post('/form',isAuthenticated, (req, res, next) => {
+
     username = req.user.username
     dia = req.body.dia
+    month = req.body.month
+    year = req.body.year
+    pet= req.body.pet
     motivo = req.body.motivo
     hora = req.body.hora
 
     
-    console.log(req.body) 
-})
+
+
+    
+
+    Card.create({
+        username:username,
+        dia:dia,
+        month:month,
+        year:year,
+        pet:pet,
+        motivo:motivo,
+        hora:hora
+    })
+    .then(card=>res.status(200).json({message: card.username}))
+    .catch(err=>{
+        console.log(error)
+    })
+
+});
+
+cardRoutes.post('/hours', (req, res, next) => {
+    const {dia, month, year} = req.body;
+
+    Card.find({dia, month, year})
+    .then(cards => res.status(200).json({data:cards}))
+    .catch(err => res.status(500).json(err));
+    
+   
+    });
+    
 
 
 module.exports = cardRoutes;
-
-
-
 

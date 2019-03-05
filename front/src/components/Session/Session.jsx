@@ -6,12 +6,12 @@ import FormDate from '../FormDate/FormDate';
 export default class Session extends Component {
 
   state={
-    ShowForm :false,day:undefined
+    ShowForm :false,date:undefined
   }
-  onDayClick = (e, day) => {
+  onDayClick = (e, date) => {
    
     this.setState({
-      ...this.state,ShowForm:true,day
+      ...this.state,ShowForm:true,date
     })
 
    
@@ -22,11 +22,13 @@ export default class Session extends Component {
       <div>
             <div className="container-session">
             <div className="Calendar">
-            <Calendar onDayClick={(e, day)=> this.onDayClick(e, day)}/>  
+            <Calendar onDayClick={(e, date)=> {
+              return this.onDayClick(e, date)
+            }}/>  
            </div>
            <div className="form-Calendar">
-          {this.state.ShowForm?<h1> Dia {this.state.day}</h1>:undefined}
-          {this.state.ShowForm?<h1><FormDate/></h1>:undefined}
+          {this.state.ShowForm?<h1> {this.state.date.day} / {this.state.date.month} / {this.state.date.year}</h1>:undefined}
+          {this.state.ShowForm?<h1><FormDate date={this.state.date}/></h1>:undefined}
       </div>
             </div>
           

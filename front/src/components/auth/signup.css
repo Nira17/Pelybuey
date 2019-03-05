@@ -40,7 +40,7 @@ input[type="password"] {
   width: 220px;
   height: 32px;
   border: none;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #db6826;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -58,7 +58,7 @@ input[type="submit"] {
   margin-top: 28px;
   width: 120px;
   height: 32px;
-  background: #a7c0bb;
+  background: #db6826;
   border: none;
   border-radius: 2px;
   color: #FFF;

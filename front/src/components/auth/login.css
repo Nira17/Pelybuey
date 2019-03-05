@@ -57,7 +57,7 @@ input[type="password"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-  border-bottom: 2px solid #16a085;
+  border-bottom: 2px solid#db6826;
   color: #16a085;
   transition: 0.2s ease;
 }
@@ -66,7 +66,7 @@ input[type="submit"] {
   margin-top: 28px;
   width: 120px;
   height: 32px;
-  background: #16a085;
+  background:#db6826;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -80,7 +80,7 @@ input[type="submit"] {
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   opacity: 0.8;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px rgba(224, 138, 40, 0.4);
   transition: 0.1s ease;
 }
 

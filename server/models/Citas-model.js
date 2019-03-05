@@ -4,6 +4,9 @@ const Schema   = mongoose.Schema;
 const cardSchema = new Schema({
     username:String,
     dia:String,
+    month:String,
+    year:String,
+    pet:String,
     motivo:String,
     hora:String
     

@@ -1,0 +1,6 @@
+calendar click
+eleva los datos de la fecha al padre (register) - mas info lifting states en LU
+register usa el servicio para comunicar con la api los slots disponibles ese dia, e.g /api/availableslots/15/3/2018
+el service devuelve que slots estan disponibles para ese dia en un array de objetos
+register entrega una actualizacion via props al component form. esto provoca un refresco de su desplegable para que solo salgan los slots correctos
+
