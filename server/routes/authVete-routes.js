@@ -6,7 +6,7 @@ const isAuthenticated  = require('../middlware/isAuthenticated')
 
 
 
-cardRoutes.post('/form',isAuthenticated, (req, res, next) => {
+cardRoutes.post('/veterinario',isAuthVete, (req, res, next) => {
 
     username = req.user.username
     dia = req.body.dia

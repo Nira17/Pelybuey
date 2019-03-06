@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import "./session.css"
 import Calendar from '../Calendar/Calendar';
 import FormDate from '../FormDate/FormDate';
+import { Link } from 'react-router-dom';
 
 export default class Session extends Component {
 
   state={
-    ShowForm :false,date:undefined
+    ShowForm :false,date:undefined,
+    
   }
   onDayClick = (e, date) => {
    
@@ -19,6 +21,7 @@ export default class Session extends Component {
 
   render() {
     return (
+      
       <div>
             <div className="container-session">
             <div className="Calendar">
@@ -31,8 +34,8 @@ export default class Session extends Component {
           {this.state.ShowForm?<h1><FormDate date={this.state.date}/></h1>:undefined}
       </div>
             </div>
-          
-          
+            
+            <button><Link to={"/dato"}> Información</Link></button>
            <div className="Footer-cal">
              <h1> la Mejor Clinica veterinaria</h1>
              <img src="../../../images/logo.png" alt=""/>

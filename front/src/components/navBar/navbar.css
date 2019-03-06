@@ -22,6 +22,7 @@
 }
 .login{
     margin-right: 50px;
+    color:white;
     }
 
     .logo{
@@ -81,6 +82,7 @@
         margin-right: 20px;
         padding: 5px;
         background-color: white;
+        text-decoration: none;
     }
 
      

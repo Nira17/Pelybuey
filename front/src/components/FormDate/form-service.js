@@ -30,6 +30,11 @@ class FormService {
         return this.service.post('/hours', {dia, month, year})
         .then(response => response.data)
     }
+    getAllveterinary =(data)=> {
+        console.log("hola")
+        return this.service.get('/allCard',data)
+        .then(response => response.data)
+    }
 }
 
 export default FormService;

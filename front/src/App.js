@@ -2,16 +2,10 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from './components/navBar/NavBar';
-import Signup from './components/auth/Signup';
-import Login from './components/auth/Login';
 import AuthService from './components/auth/auth-service';
+import Navbar from './components/navBar/NavBar';
 import Home from './components/Home/Home';
-
-
-
-
+// import DateVeterinary from './components/DateVeterinary/DateVeterinary';
 
 
 
@@ -52,7 +46,7 @@ class App extends Component {
       return (
         <div className="App">
           <Navbar userInSession={this.state.loggedInUser} getUser={this.getTheUser}/>
-         
+      
         </div>
       
       );
@@ -60,12 +54,11 @@ class App extends Component {
       return (
         <div className="App">
           <Navbar userInSession={this.state.loggedInUser} getUser={this.getTheUser}/>
-          <Home/>
-          <Switch> 
-  <Route exact path='/' render={() => <Login getUser={this.getTheUser}/>}/>
-  <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
-  
-</Switch>
+          <Home getUser={this.getTheUser}/>
+          {/* <DateVeterinary/> */}
+         
+          
+          
         </div>
       );
     }

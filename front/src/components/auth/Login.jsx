@@ -5,8 +5,15 @@ import { Link } from 'react-router-dom';
 class Login extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { 
+      username: '',
+      password: '' ,
+      showl:false
+      
+    }
+    
     this.service = new AuthService();
+    
   }
 
   handleFormSubmit = (event) => {
@@ -15,7 +22,11 @@ class Login extends Component {
     const password = this.state.password;
     this.service.login(username, password)
     .then( response => {
-        this.setState({ username: "", password: "" });
+        this.setState({ 
+          username: "",
+           password: "",
+           showl:true,
+          });
         this.props.getUser(response)
     })
     .catch( error => console.log(error) )
@@ -28,9 +39,9 @@ class Login extends Component {
     
   render(){
     return(
-      <div id="login-box" >
+       <div id="login-box" >
       <div className="left">
-      <form onSubmit={this.handleFormSubmit}>
+       <form onSubmit={this.handleFormSubmit}>
           <h1>Username:</h1>
           <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
           <label>Password:</label>
@@ -41,7 +52,7 @@ class Login extends Component {
         <p>Don't have account? 
             <Link to={"/signup"}> Signup</Link>
         </p>
-       </div>
+      </div>
         
       </div>
     )

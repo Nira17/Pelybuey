@@ -1,0 +1,17 @@
+.cards{
+    height: 150px;
+    padding: 20px;
+    margin: 50px;
+   
+}
+
+.container-d {
+    width: 80%;
+    background-color: orange;
+    color: white;
+    margin-right: 300px;
+}
+
+.cards h1{
+    background-color: rgb(128, 63, 46);
+}
