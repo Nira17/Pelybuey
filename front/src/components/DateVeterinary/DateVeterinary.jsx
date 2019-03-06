@@ -49,6 +49,7 @@ export default class DateVeterinary extends Component {
                       <h1>Usuario:{card.username}</h1>
                       <p>Dia:{card.dia} {card.month} {card.year}</p>
                       <p>Mascota:{card.pet}</p>
+                      <p>hora:{card.hora}</p>
                       <p>Motivo:{card.motivo}</p>
                       <p></p>  
 

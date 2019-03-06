@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AuthService from './components/auth/auth-service';
 import Navbar from './components/navBar/NavBar';
-import Home from './components/Home/Home';
+import Home from './components/Home/Home'; 
 // import DateVeterinary from './components/DateVeterinary/DateVeterinary';
 
 

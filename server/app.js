@@ -107,6 +107,9 @@ app.use('/api', authRoutes);
 const cardRoutes = require('./routes/card-routes');
 app.use('/api', cardRoutes);
 
+const authVeteRoutes = require('./routes/authVete-routes');
+app.use('/api',authVeteRoutes)
+
 app.use((req, res, next) => {
   res.sendFile(__dirname + "/public/index.html");
 });

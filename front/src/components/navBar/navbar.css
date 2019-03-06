@@ -1,8 +1,9 @@
 .container-nav{
     background-color: #ffff;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     height: 100px;
+    width: 100%;
     
 
 }
@@ -57,7 +58,7 @@
     
     
      .container-nav img{
-         margin-right: 1250px;
+         margin-right: 1050px;
      }
      
 

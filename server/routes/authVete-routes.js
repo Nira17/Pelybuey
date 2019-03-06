@@ -1,12 +1,12 @@
 const express    = require('express');
-const cardRoutes = express.Router();
+const authVeteRoutes = express.Router();
 const Card       = require('../models/Citas-model');
-const isAuthenticated  = require('../middlware/isAuthenticated')
+const isAuthVete  = require('../middlware/isAuthVete')
 
 
 
 
-cardRoutes.post('/veterinario',isAuthVete, (req, res, next) => {
+authVeteRoutes.post('/veterinario',isAuthVete, (req, res, next) => {
 
     username = req.user.username
     dia = req.body.dia
@@ -32,25 +32,5 @@ cardRoutes.post('/veterinario',isAuthVete, (req, res, next) => {
 
 });
 
-cardRoutes.post('/hours', (req, res, next) => {
-    const {dia, month, year} = req.body;
-
-    Card.find({dia, month, year})
-    .then(cards => res.status(200).json({data:cards}))
-    .catch(err => res.status(500).json(err));
-    
-   
-    });
-cardRoutes.get('/allCard',(req, res, next)=>{
-
-
-    Card.find()
-    .then((cards) =>{
-        
-        res.json(cards)
-    })
-})    
-
-
-module.exports = cardRoutes;
+module.exports = authVeteRoutes;
 

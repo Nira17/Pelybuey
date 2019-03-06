@@ -22,28 +22,28 @@ export default class Session extends Component {
   render() {
     return (
       
-      <div>
-            <div className="container-session">
-            <div className="Calendar">
-            <Calendar onDayClick={(e, date)=> {
-              return this.onDayClick(e, date)
-            }}/>  
-           </div>
-           <div className="form-Calendar">
-          {this.state.ShowForm?<h1> {this.state.date.day} / {this.state.date.month} / {this.state.date.year}</h1>:undefined}
-          {this.state.ShowForm?<h1><FormDate date={this.state.date}/></h1>:undefined}
-      </div>
+        <div>
+              <div className="container-session">
+              <div className="Calendar">
+              <Calendar onDayClick={(e, date)=> {
+                return this.onDayClick(e, date)
+              }}/>  
+            </div>
+            <div className="form-Calendar">
+            {this.state.ShowForm?<h1> {this.state.date.day} / {this.state.date.month} / {this.state.date.year}</h1>:undefined}
+            {this.state.ShowForm?<h1><FormDate date={this.state.date}/></h1>:undefined}
+        </div>
+              </div>
+            
+            
+            <div className="Footer-cal">
+              <h1> la Mejor Clinica veterinaria</h1>
+              <img src="../../../images/logo.png" alt=""/>
             </div>
             
-            <button><Link to={"/dato"}> Información</Link></button>
-           <div className="Footer-cal">
-             <h1> la Mejor Clinica veterinaria</h1>
-             <img src="../../../images/logo.png" alt=""/>
-           </div>
-           
-         
-         </div>
-         
+          
+          </div>
+          
           
     )
   }
