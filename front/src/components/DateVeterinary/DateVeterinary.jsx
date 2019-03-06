@@ -16,7 +16,6 @@ export default class DateVeterinary extends Component {
     }
     this.service = new FormService();
     this.getVeterinary()
-   
   }
   
   getVeterinary =(username)=>{
@@ -44,21 +43,15 @@ export default class DateVeterinary extends Component {
                 
                   return(
                     
-                      <div className="cards">
-                      <div className='container-d'>
+                  <div className="cards">
+                    <div className='container-d'>
                       <h1>Usuario:{card.username}</h1>
-                      <p>Dia:{card.dia} {card.month} {card.year}</p>
-                      <p>Mascota:{card.pet}</p>
-                      <p>hora:{card.hora}</p>
-                      <p>Motivo:{card.motivo}</p>
-                      <p></p>  
-
-                     
-        
-                      </div>
-                     
-                      
-                      </div>
+                      <h5>Dia:{card.dia} {card.month} {card.year}</h5>
+                      <h5>Mascota:{card.pet}</h5>
+                      <h5>hora:{card.hora}</h5>
+                      <h5>Motivo:{card.motivo}</h5>
+                    </div>
+                  </div>
 
                       
                   )
@@ -66,11 +59,6 @@ export default class DateVeterinary extends Component {
           }
       </div>
   </div>
-
-
-     
-      
-  
     )
 
   }

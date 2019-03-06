@@ -7,11 +7,18 @@
 
 .container-d {
     width: 80%;
-    background-color: orange;
-    color: white;
-    margin-right: 300px;
+    border:1px solid black;
+    margin-left: 150px;
+    background-color: antiquewhite;
+}
+
+.cards p{
+
 }
 
 .cards h1{
-    background-color: rgb(128, 63, 46);
+    background-color: #db6826;
+    color: white;
+    
+   
 }

@@ -18,7 +18,7 @@ const salt     = bcrypt.genSaltSync(10);
 const hashPass = bcrypt.hashSync("1234", salt);
 
 const veterinario = {
-    username: "Oscar",
+    username: "Veterinario",
     password: hashPass,
     veterinario: true
 }
