@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AuthService from '../auth/auth-service';
 import Session from '../Session/Session';
 import "./navbar.css"
+import DateVeterinary from '../DateVeterinary/DateVeterinary';
 
 class Navbar extends Component {
   constructor(props){
@@ -45,7 +46,7 @@ class Navbar extends Component {
         </div>
         
         </div>
-        <Session/>
+      {this.state.loggedInUser.veterinario ? <DateVeterinary /> : <Session/> }
         
         
       </div>

@@ -24,8 +24,8 @@ class Login extends Component {
     .then( response => {
         this.setState({ 
           username: "",
-           password: "",
-           showl:true,
+          password: "",
+          showl:true,
           });
         this.props.getUser(response)
     })
@@ -39,7 +39,7 @@ class Login extends Component {
     
   render(){
     return(
-       <div id="login-box" >
+      <div id="login-box" >
       <div className="left">
        <form onSubmit={this.handleFormSubmit}>
           <h1>Username:</h1>

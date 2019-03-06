@@ -5,7 +5,6 @@ import './App.css';
 import AuthService from './components/auth/auth-service';
 import Navbar from './components/navBar/NavBar';
 import Home from './components/Home/Home'; 
-// import DateVeterinary from './components/DateVeterinary/DateVeterinary';
 
 
 
@@ -55,8 +54,8 @@ class App extends Component {
         <div className="App">
           <Navbar userInSession={this.state.loggedInUser} getUser={this.getTheUser}/>
           <Home getUser={this.getTheUser}/>
-          {/* <DateVeterinary/> */}
-         
+           {/* <DateVeterinary/> 
+          */}
           
           
         </div>

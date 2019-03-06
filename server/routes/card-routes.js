@@ -2,6 +2,7 @@ const express    = require('express');
 const cardRoutes = express.Router();
 const Card       = require('../models/Citas-model');
 const isAuthenticated  = require('../middlware/isAuthenticated')
+const isAuthVete = require ('../middlware/isAuthVete')
 
 
 
@@ -41,7 +42,7 @@ cardRoutes.post('/hours', (req, res, next) => {
     
    
     });
-cardRoutes.get('/allCard',(req, res, next)=>{
+cardRoutes.get('/allCard',isAuthVete,(req, res, next)=>{
 
 
     Card.find()
