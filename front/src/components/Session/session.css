@@ -1,30 +1,39 @@
 *{
     box-sizing: content-box;
     }
+
+ .nav-style{
+     background-color:#f1890c;
+     color:white;
+ } 
+ 
+ 
  
 .container-session{
+    flex-direction: column;
     background-color: bisque;
-    height: 650px;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 150px;
-} 
+    height: 365px;
     
+    
+} 
+h5{
+    padding-top:20px;
+
+}
+.Footer-cal h1{
+    
+    background-color:#f1880d;
+}
 
 .Calendar{
-    padding-top:150px;
-    padding-left: 100px;
-    width: 45%;
+    margin-top:-20px;
+   
     
 }
 .form-Calendar{
-    width: 45%;
+    width: 100%;
     padding: 50px;
 }
 
-.Footer-cal{
-    margin-top:50px;
-}
-.Footer-cal h1{
-    font-size: 2em;
-}
+
+

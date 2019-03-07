@@ -24,7 +24,12 @@ export default class Session extends Component {
       
         <div>
               <div className="container-session">
+              <h5 className="pCita">Elige el día que quieras tu cita</h5>
               <div className="Calendar">
+               
+                
+            
+              
               <Calendar onDayClick={(e, date)=> {
                 return this.onDayClick(e, date)
               }}/>  
@@ -37,7 +42,7 @@ export default class Session extends Component {
             
             
             <div className="Footer-cal">
-              <h1> la Mejor Clinica veterinaria</h1>
+              <h1> la Mejor Clinica Veterinaria</h1>
               <img src="../../../images/logo.png" alt=""/>
             </div>
             

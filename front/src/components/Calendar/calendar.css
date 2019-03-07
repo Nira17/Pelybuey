@@ -14,7 +14,7 @@ body {
     margin:50px auto; 
     font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif; 
     display:table; 
-    width: 50%;
+    width: 100%;
 
    
    
@@ -25,7 +25,7 @@ body {
 
 #cal .header { 
     cursor:default; 
-     background-color:rgb(211, 70, 70);
+     background-color:#af581ac9;
     height: 34px; 
     position: relative; 
     color: #f5f5f5;

@@ -1,47 +1,70 @@
 *{
-box-sizing: content-box;
-}
-
-.container-home{
-    width: 100%;
-    height: 800px;
-    background-image: url("https://www.cronoshare.com/blog/wp-content/uploads/2017/02/montar-una-cl%C3%ADnica-veterinaria4.png") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-}
-
-.home{
-    display: flex;
-    justify-content: space-between;
+    box-sizing: content-box;
+    }
+    .item-nav{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+     }
+     .header{
+        width:100%;
+        margin-top:20px;
+        color:#774508;
+       
+    }
     
+    .container-home{
+        width: 100%;
+        margin: 0;
+    }
+        
     
-}
-
-   .p-home{
-    font-size: 1.6em;
-    padding: 200px;
-    height: 398px;
-    background-color: bisque;
-    opacity: 0.6;
-    width: 20%;
-}
-.p-home2{
-    margin-top: 200px;
-    margin-right: 500px;
-    opacity: 0.9;
-}
-
-.p-home p{
-    font-size: 1em;
-}
-hr{
-    border: 1px solid rgb(0, 0, 0);
-    margin:0;
-}
-.footer{
-    margin:0;
-    width: 100%;
-    height: 400px;
-    background-color:#db6826;
-} 
+    .fondo-img{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-size:contain;
+        background-repeat:no-repeat;
+        height: 209px;
+        background-image: url("https://www.cronoshare.com/blog/wp-content/uploads/2017/02/montar-una-cl%C3%ADnica-veterinaria4.png") ;
+    }
+        
+    .container-p{
+        margin-top:-25px;;
+        padding: 0;
+        color: azure;
+        background-color:#f1890c;
+        flex-direction: column;
+        height: 250px;
+    }
+    
+    .p-home{
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        margin-top: 20px;
+        margin-left:35px;
+       
+        
+        
+       
+        
+    }
+    .box-ls{
+        
+    }
+    
+    .p-home p{
+        font-size: 1em;
+    }
+    hr{
+        border: 1px solid rgb(0, 0, 0);
+        margin:0;
+    }
+    .footer{
+        margin:0;
+        width: 100%;
+        height: 400px;
+        background-color:#db6826;
+    } 
+    

@@ -41,7 +41,7 @@ class Navbar extends Component {
         <h1>Welcome, {this.state.loggedInUser.username}</h1>
         </div>
         <div className="item">
-        <button className=".btn" onClick={() => this.logoutUser()} > <span>Logout</span></button>
+        <button className="logout" onClick={() => this.logoutUser()} > <span>Logout</span></button>
         
         </div>
         
@@ -59,19 +59,18 @@ class Navbar extends Component {
     } else {
       return ( 
       
-        <nav className="nav-style">
+        <nav>
   
           <div className="container-nav">
-          
           <img src="../../../images/logo.png" alt=""/>
-        <div className="item-nav">
-
+          </div>
+          {/* <div className="header">
+          <h3>Tu Clínica Veterinaria</h3>
+          <div className="item-nav">
             <button className="login" ><Link to='/' style={{ textDecoration: 'none' ,color:'white'}}>Login</Link></button>
             <button className="signup"><Link to='/signup' style={{ textDecoration: 'none', color:'white' }}>Signup</Link></button>
-        </div>
-            
-            
-          </div>
+           </div>
+          </div> */}
         </nav>
       )
     }
@@ -79,3 +78,9 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+        
+               
+
+          
+            
+            
