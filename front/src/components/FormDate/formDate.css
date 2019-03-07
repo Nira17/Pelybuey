@@ -1,5 +1,5 @@
 .container-cita{
-  width: 100%;
+  width: 80%;
   max-width: 600px;
   margin: auto;
   background-color: #f1ede7;
@@ -14,6 +14,13 @@
 .prim{
   margin-top:50px;
   padding-top:50px;
+}
+.prim input{
+  width: 80%;
+}
+.prim p{
+  font-size: 80%;
+  padding-bottom: 5px;
 }
 
 .segund{
@@ -30,7 +37,5 @@
 }
  .ok{
   background-color: rgb(159, 240, 159);
-
   padding-top:200px;
-  
 }

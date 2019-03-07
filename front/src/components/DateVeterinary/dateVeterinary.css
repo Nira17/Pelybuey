@@ -1,23 +1,38 @@
 .cards{
-    height: 150px;
-    padding: 20px;
-    margin: 50px;
+    height: 200px;
+   
+    margin: 10px;
+    border:1px solid black;
+    background-color: antiquewhite;
+    
    
 }
 
-.container-d {
-    width: 80%;
-    border:1px solid black;
-    margin-left: 150px;
-    background-color: antiquewhite;
+.container-h1 {
+    width: 100%;
+    
+    
+    
+}
+.text-card{
+    width: 50%;
+    margin-top:-10px;
 }
 
-.cards p{
+.text-card h5{
+    width: 100%;
+    height: 2px;
+    text-align: left;
+    padding-left: 15px;
+    
+   
+     
+ }
 
-}
+
 
 .cards h1{
-    background-color: #db6826;
+    background-color:#f1880d;
     color: white;
     
    

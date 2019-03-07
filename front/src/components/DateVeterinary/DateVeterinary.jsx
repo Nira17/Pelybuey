@@ -44,8 +44,10 @@ export default class DateVeterinary extends Component {
                   return(
                     
                   <div className="cards">
-                    <div className='container-d'>
+                    <div className='container-h1'>
                       <h1>Usuario:{card.username}</h1>
+                    </div>
+                    <div className="text-card">
                       <h5>Dia:{card.dia} {card.month} {card.year}</h5>
                       <h5>Mascota:{card.pet}</h5>
                       <h5>hora:{card.hora}</h5>

@@ -35,12 +35,13 @@ export default class Session extends Component {
               }}/>  
             </div>
             <div className="form-Calendar">
-            {this.state.ShowForm?<h1> {this.state.date.day} / {this.state.date.month} / {this.state.date.year}</h1>:undefined}
+              {this.state.ShowForm?<h1> {this.state.date.day} / {this.state.date.month} / {this.state.date.year}</h1>:undefined}
+            </div>
+            </div>
+            
+            <div className="form">
             {this.state.ShowForm?<h1><FormDate date={this.state.date}/></h1>:undefined}
-        </div>
-              </div>
-            
-            
+            </div>
             <div className="Footer-cal">
               <h1> la Mejor Clinica Veterinaria</h1>
               <img src="../../../images/logo.png" alt=""/>

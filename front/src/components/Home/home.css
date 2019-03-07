@@ -20,10 +20,9 @@
         
     
     .fondo-img{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        background-size:contain;
+        
+       
+        background-size:cover;
         background-repeat:no-repeat;
         height: 209px;
         background-image: url("https://www.cronoshare.com/blog/wp-content/uploads/2017/02/montar-una-cl%C3%ADnica-veterinaria4.png") ;
