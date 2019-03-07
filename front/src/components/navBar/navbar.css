@@ -9,7 +9,7 @@ body{
 }
 
 
-.login , .signup ,.logout{
+.login , .signup ,.logout,.button-cita{
     background-color: #f1890c;
     width: 120px;
     height: 50px;

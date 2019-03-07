@@ -106,9 +106,9 @@ export default class FormDate extends Component {
         </select>
       </div>
 
-        <div className="button-cita">
-  <input type="submit" value="Enviar" />
-        </div>
+       
+  <button className="button-cita" type="submit" value="Enviar">Enviar</button>
+        
       </form>
         : <h1 className="ok">Genial!,tu cita está confirmada</h1>
         
