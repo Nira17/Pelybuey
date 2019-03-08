@@ -50,7 +50,12 @@
         
     }
     .box-ls{
-        
+        display: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 55%;
+        margin-top: -150px;
     }
     
     .p-home p{

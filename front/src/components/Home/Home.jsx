@@ -9,7 +9,19 @@ import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
   
-  
+  constructor() {
+    super();
+
+    this.state = {display: {display:'none'}}
+  }
+
+  toggleForm = () => {
+    if(this.state.display.display === 'none') {
+      this.setState({...this.state, display: {display:'block'}});
+    } else {
+      this.setState({...this.state, display: {display:'none'}});
+    }
+  }
 
 
   render() {
@@ -24,8 +36,8 @@ export default class Home extends Component {
           <h3>Tu Clínica Veterinaria</h3>
           
           <div className="item-nav">
-            <button className="login" ><Link to='/' style={{ textDecoration: 'none' ,color:'white'}}>Login</Link></button>
-            <button className="signup"><Link to='/signup' style={{ textDecoration: 'none', color:'white' }}>Signup</Link></button>
+            <button className="login" onClick={this.toggleForm} ><Link to='/' style={{ textDecoration: 'none' ,color:'white'}}>Login</Link></button>
+            <button className="signup" onClick={this.toggleForm}><Link to='/signup' style={{ textDecoration: 'none', color:'white' }}>Signup</Link></button>
             </div>
            </div>
             
@@ -47,9 +59,9 @@ export default class Home extends Component {
             
       
             
-              <div className="box-ls">
+              <div style={this.state.display} className="box-ls">
                 <Switch> 
-                <Route exact path='/' render={() => <Login getUser={this.props.getUser}/>}/>
+                <Route exact path='/' render={() => <Login  getUser={this.props.getUser}/>}/>
                 <Route exact path='/signup' render={() => <Signup getUser={this.props.getUser}/>}/>
                 </Switch>
               </div>
