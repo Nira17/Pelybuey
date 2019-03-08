@@ -11,7 +11,7 @@ class Navbar extends Component {
     this.state = { 
       loggedInUser: null,
       showLogin:true
-     };
+    };
     this.service = new AuthService();
   }
 
@@ -26,7 +26,7 @@ class Navbar extends Component {
       this.setState({ 
         loggedInUser: null,
         showLogin:false,
-       });
+      });
     })
   }
 
